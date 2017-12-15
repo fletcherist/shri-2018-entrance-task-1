@@ -21,9 +21,15 @@
     "graphql-date": "^1.0.3",
     "graphql-tools": "^1.2.1",
     "sequelize": "^4.7.5",
-    "sqlite3": "^3.1.9"
+    "sqlite3": "^3.1.13"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.13.1",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "nodemon": "^1.12.5",
     "semistandard": "^11.0.0"
   }
