@@ -8,6 +8,21 @@ const graphqlRoutes = require('./graphql/routes');
 
 const app = express();
 
+const whitelist = [
+  'http://localhost:1234',
+  'http://fletcherist.github.io',
+  'https://fletcherist.github.io'
+];
+const corsOptions = {
+  origin: function (origin, callback) {
+    const originIsWhitelisted = whitelist.indexOf(origin) !== -1
+    callback(null, originIsWhitelisted)
+  },
+  credentials: true
+};
+
+app.use(cors(corsOptions))
+
 app.use(bodyParser.json());
 
 app.use('/', pagesRoutes)
