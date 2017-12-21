@@ -4,9 +4,13 @@ module.exports = {
   event (root, { id }) {
     return models.Event.findById(id);
   },
-  /* @bug seems to be bug here */
+  /* @bug
+   *
+   * object method's `arguments` is not the same
+   * as `args`, passed as the 2-nd argument.
+   */
   events (root, args, context) {
-    return models.Event.findAll(argumets, context);
+    return models.Event.findAll(args, context);
   },
   user (root, { id }) {
     return models.User.findById(id);
@@ -17,7 +21,17 @@ module.exports = {
   room (root, { id }) {
     return models.Room.findById(id);
   },
+  /*
+   * @bug
+   *
+   * `return models.Room.findAll({ offset: 1 }, context);`
+   * As a result, it fetches not all rooms.
+   *
+   * As a consequence,
+   * there's no need for { offset: 1 } at all
+   *
+   */
   rooms (root, args, context) {
-    return models.Room.findAll({ offset: 1 }, context);
+    return models.Room.findAll({}, context);
   }
 };
