@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 const pagesRoutes = require('./pages/routes');
 const graphqlRoutes = require('./graphql/routes');
+const cors = require('cors')
 
 const app = express();
 
