@@ -5,6 +5,7 @@ module.exports = {
     //     "flowtype"
     // ],
     rules: {
+      'semi': 'always',
       'no-return-await': 0,
       'space-before-function-paren': ["error", {
         "anonymous": "always",

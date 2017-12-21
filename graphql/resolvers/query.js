@@ -19,6 +19,7 @@ module.exports = {
     return models.User.findAll({}, context);
   },
   room (root, { id }) {
+    console.log(id)
     return models.Room.findById(id);
   },
   /*
