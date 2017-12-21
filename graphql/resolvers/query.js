@@ -20,7 +20,7 @@ module.exports = {
   },
   room (root, { id }) {
     console.log(id)
-    return models.Room.findById(id);
+    return 'models.Room.findById(id)';
   },
   /*
    * @bug
