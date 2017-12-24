@@ -10,9 +10,11 @@ module.exports = function resolvers () {
     Mutation: mutation,
 
     Event: {
+      /* @bug: missed return here */
       users (event) {
         return event.getUsers();
       },
+      /* @bug: missed return here */
       room (event) {
         return event.getRoom();
       },

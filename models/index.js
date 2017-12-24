@@ -12,8 +12,6 @@ const sequelize = new Sequelize('database', null, null, {
   logging: false
 });
 
-// const sequelize = new Sequelize('sqlite:db.sqlite3')
-
 sequelize
   .authenticate()
   .then(() => {

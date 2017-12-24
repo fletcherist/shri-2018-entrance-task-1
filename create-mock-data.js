@@ -3,19 +3,22 @@ const { models, sequelize } = require('./models');
 function createData () {
   let usersPromise = models.User.bulkCreate([
     {
-      login: 'veged',
+      login: 'vegeddd',
       avatarUrl: 'https://avatars3.githubusercontent.com/u/15365?s=460&v=4',
-      homeFloor: 0
+      homeFloor: 0,
+      username: 'Sergey Berezhnoy'
     },
     {
       login: 'alt-j',
       avatarUrl: 'https://avatars1.githubusercontent.com/u/3763844?s=400&v=4',
-      homeFloor: 3
+      homeFloor: 3,
+      username: 'Andrey Morozov'
     },
     {
       login: 'yeti-or',
       avatarUrl: 'https://avatars0.githubusercontent.com/u/1813468?s=460&v=4',
-      homeFloor: 2
+      homeFloor: 2,
+      username: 'Vasiliy'
     }
   ]);
 
