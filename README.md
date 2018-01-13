@@ -62,6 +62,7 @@ https://yandex-rooms-graphql.herokuapp.com/
 **[Коммит с поддержкой CORS](https://github.com/fletcherist/shri-2018-entrance-task-1/commit/a51bcf524bc19d39141ce05f2ccf13c1e1a162ef)**
 
 
+Думаю, что ничего не забыл. **[Перейти к третьему заданию](https://github.com/fletcherist/shri-2018-entrance-task-3)**
 
 ## Запуск
 ```
