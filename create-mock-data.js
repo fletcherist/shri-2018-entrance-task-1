@@ -157,8 +157,10 @@ function createData () {
       let roomIndex = 0
 
       events.forEach((event, index) => {
+        const RANDOM_USER_ID = randomIntFromInterval(0, users.length - 2)
+
         promises.push(events[index].setRoom(rooms[Math.max(roomIndex)]))
-        promises.push(events[index].setUsers([users[0], users[1]]))
+        promises.push(events[index].setUsers([users[RANDOM_USER_ID], users[RANDOM_USER_ID + 1]]))
 
         if ((index + 1) % EVENTS_COUNT === 0) {
           if (roomIndex === MOCK_ROOMS.length - 1) {
