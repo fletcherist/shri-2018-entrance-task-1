@@ -52,7 +52,7 @@ type Query {
   user(id: ID!): User
   users: [User]
   event(id: ID!): Event
-  events: [Event]
+  events(dateStart: Date, dateEnd: Date): [Event]
   room(id: ID!): Room
   rooms: [Room]
 }

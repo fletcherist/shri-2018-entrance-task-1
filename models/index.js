@@ -8,7 +8,11 @@ const sequelize = new Sequelize('database', null, null, {
   dialect: 'sqlite',
   storage: 'db.sqlite3',
 
-  operatorsAliases: { $and: Op.and },
+  operatorsAliases: {
+    $and: Op.and,
+    $gt: Op.gt,
+    $lt: Op.lt
+  },
   logging: false
 });
 

@@ -1,4 +1,5 @@
 const { models } = require('../../models');
+const { Op } = require('sequelize')
 
 module.exports = {
   event (root, { id }) {
@@ -9,8 +10,22 @@ module.exports = {
    * object method's `arguments` is not the same
    * as `args`, passed as the 2-nd argument.
    */
+
   events (root, args, context) {
-    return models.Event.findAll(args, context);
+    return models.Event.findAll({
+      where: {
+        dateStart: {
+          [Op.gt]: args.dateStart
+            ? new Date(args.dateStart)
+            : null,
+        },
+        dateEnd: {
+          [Op.lt]: args.dateEnd
+            ? new Date(args.dateEnd)
+            : null
+        }
+      }
+    }, context);
   },
   user (root, { id }) {
     return models.User.findById(id);
